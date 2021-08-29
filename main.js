@@ -8,10 +8,10 @@ user = student;
 console.log(user);
 // Работа с примитивами
 const test = 1 + 1 + '1';
-// произошла конктациная, неявное преобразвание в строку, бинарным +, если бы отнимали, было бы все ок:)
+// произошла конкатенация, неявное преобразвание в строку, бинарным +, если бы отнимали, было бы все ок:)
 
 console.log(test, Boolean(test));
-// булево значение - true. Так как строка не пуская
+// булево значение - true. Так как строка не пустая
 
 // РАБОТА С МАССИВАМИ
 // 1. Произведение всех элементов массива
@@ -22,7 +22,7 @@ function incmultiplicationl (arr) {
     if (typeof array[i] === 'string') {
       return console.log('Введите числовое значение');
     } else {
-      sum = sum * array[i];
+      sum *= array[i];
     }
   }
   return sum;
@@ -39,6 +39,6 @@ for (let i = 0; i < arrСhoice.length; i++) {
 const arrHonest = [2, 5, 8, 15, 0, 6, 20, 3];
 for (let i = 0; i < arrHonest.length; i++) {
   if (arrHonest[i] % 2 === 0) {
-    console.log('Четный элемент массива arrHonest:', `${arrHonest[i]}`);
+    console.log('Четный элементы массива arrHonest:', `${arrHonest[i]}`);
   }
 }
