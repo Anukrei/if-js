@@ -62,9 +62,13 @@ const numMax = (a, b) => a > b ? console.log(`${a}`) : console.log(`${b}`);
 console.log(numMax(7, 10));
 // Наименьшее число *Не использовал return
 const numMin = (a, b) => a < b ? console.log(`${a}`) : console.log(`${b}`);
-console.log(numMin(10, 7));
+console.log(numMin(10, 1));
 
 // Задание 3. Может не самый быстрый способ)
 const arr = [0, 15, 10, 16, 28, 19, 50, 70, 85, 90];
-const res = arr.toString().replace(/0/g, 'zero');
-console.log(res.replace(/\[|]/g, '').split(','));
+function arrt (strNum) {
+  let res;
+	 res = arr.toString().replace(/0/g, 'zero');
+	 return res.replace(/\[|]/g, '').split(',');
+}
+console.log(arrt(arr));
