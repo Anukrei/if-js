@@ -42,3 +42,29 @@ for (let i = 0; i < arrHonest.length; i++) {
     console.log('Четный элементы массива arrHonest:', `${arrHonest[i]}`);
   }
 }
+
+// Задание 1. Выполнение полиндрома в булевом представлении функции
+
+function isPolindrome (str) {
+  for (let leftItem = 0, rightItem = str.length - 1; leftItem < str.length; leftItem++, rightItem--) {
+    if (str[leftItem] !== str[rightItem]) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+console.log(isPolindrome('казак'));
+
+// Задание 2. Наибольшее число *Не использовал return
+const numMax = (a, b) => a > b ? console.log(`${a}`) : console.log(`${b}`);
+console.log(numMax(7, 10));
+// Наименьшее число *Не использовал return
+const numMin = (a, b) => a < b ? console.log(`${a}`) : console.log(`${b}`);
+console.log(numMin(10, 7));
+
+// Задание 3. Может не самый быстрый способ)
+const arr = [0, 15, 10, 16, 28, 19, 50, 70, 85, 90];
+const res = arr.toString().replace(/0/g, 'zero');
+console.log(res.replace(/\[|]/g, '').split(','));
