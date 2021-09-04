@@ -47,28 +47,32 @@ for (let i = 0; i < arrHonest.length; i++) {
 
 function isPolindrome (str) {
   for (let leftItem = 0, rightItem = str.length - 1; leftItem < str.length; leftItem++, rightItem--) {
-    if (str[leftItem] !== str[rightItem]) {
-      return false;
-    } else {
-      return true;
-    }
+    if (str[leftItem] !== str[rightItem]){
+		return false;
+	 }
   }
+  return true;
 }
 
 console.log(isPolindrome('казак'));
 
 // Задание 2. Наибольшее число *Не использовал return
-const numMax = (a, b) => a > b ? console.log(`${a}`) : console.log(`${b}`);
-console.log(numMax(7, 10));
+const numMax = (a, b) => a > b ? a : b;
+console.log(numMax(25, 10));
 // Наименьшее число *Не использовал return
-const numMin = (a, b) => a < b ? console.log(`${a}`) : console.log(`${b}`);
-console.log(numMin(10, 1));
+const numMin = (a, b) => a < b ? a : b;
+console.log(numMin(5, 8));
 
-// Задание 3. Может не самый быстрый способ)
+// Задание 3. Может не самый быстрый способ. Два раза replace, но работает:)Об оптимизации уже потом)
 const arr = [0, 15, 10, 16, 28, 19, 50, 70, 85, 90];
-function arrt (strNum) {
-  let res;
-	 res = arr.toString().replace(/0/g, 'zero');
-	 return res.replace(/\[|]/g, '').split(',');
+function arrNum (strNum) {
+strNum= arr.toString().replace(/0/g, 'zero').replace(/\[|]/g, '').split(',');
+	 return strNum
 }
-console.log(arrt(arr));
+console.log(arrNum(arr));
+
+
+
+
+
+
