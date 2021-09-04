@@ -66,8 +66,7 @@ console.log(numMin(5, 8));
 // Задание 3. Может не самый быстрый способ. Два раза replace, но работает:)Об оптимизации уже потом)
 const arr = [0, 15, 10, 16, 28, 19, 50, 70, 85, 90];
 function arrNum (strNum) {
-  strNum = arr.toString().replace(/0/g, 'zero').replace(/\[|]/g, '').split(',');
-	return strNum;
+	return strNum.toString().replace(/0/g, 'zero').replace(/\[|]/g, '').split(',');
 }
 console.log(arrNum(arr));
 
@@ -80,9 +79,7 @@ const sum = (a) => (b) => {
 console.log(sum(2)(5));
 
 // Покрасьте абзацы по клику (событие click):
-
 const colorsArr = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];// Исходный массив цветов.
-
 const СolorElement = document.getElementsByTagName('p'); // Метод поиска по странице, желательно пр id, но у всех общий - p)
 for (let i = 0; i < СolorElement.length; i++) { // Цикл по найденному в документе.
   СolorElement[i].addEventListener('click', func()); // К каждому итовому элементу по поиску добавляем событие (обработчик) addEventListener что бы не перезаписывалось событие - click.
