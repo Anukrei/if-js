@@ -66,8 +66,7 @@ console.log(numMin(5, 8));
 // Задание 3. Может не самый быстрый способ. Два раза replace, но работает:)Об оптимизации уже потом)
 const arr = [0, 15, 10, 16, 28, 19, 50, 70, 85, 90];
 function arrNum (strNum) {
-strNum= arr.toString().replace(/0/g, 'zero').replace(/\[|]/g, '').split(',');
-	 return strNum
+return strNum.toString().replace(/0/g, 'zero').replace(/\[|]/g, '').split(',');
 }
 console.log(arrNum(arr));
 
