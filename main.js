@@ -43,7 +43,7 @@ for (let i = 0; i < arrHonest.length; i++) {
   }
 }
 
-// Задание 1. Выполнение полиндрома в булевом представлении функции
+// Задание 1. Выполнение полиндрома в булевом представлении функции. Пока без оптимизаци. До конца не понял, в сравние в половину строки.
 
 function isPolindrome (str) {
   for (let leftItem = 0, rightItem = str.length - 1; leftItem < str.length; leftItem++, rightItem--) {
