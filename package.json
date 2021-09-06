@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "lint-write": "eslint --debug",
-	 "lint":"eslint main.js"
+    "lint": "eslint main.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.24.0",
-    "husky": "^7.0.1"
+    "husky": "^7.0.1",
+    "jest": "^27.1.0"
   },
   "lint-staged": {
     "*.(js|jsx)": [
@@ -38,7 +40,8 @@
     }
   },
   "dependencies": {
-    "lint-staged": "^11.1.2",
-    "eslint-config-airbnb": "^18.2.1"
+    "@types/jest": "^27.0.1",
+    "eslint-config-airbnb": "^18.2.1",
+    "lint-staged": "^11.1.2"
   }
 }
