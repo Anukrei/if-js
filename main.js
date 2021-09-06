@@ -47,8 +47,8 @@ for (let i = 0; i < arrHonest.length; i++) {
 
 function isPolindrome (str) {
   for (let leftItem = 0, rightItem = str.length - 1; leftItem < str.length; leftItem++, rightItem--) {
-    if (str[leftItem] !== str[rightItem]){
-		return false;
+    if (str[leftItem] !== str[rightItem]) {
+      return false;
 	 }
   }
   return true;
@@ -66,6 +66,3 @@ console.log(numMin(5, 8));
 // Задание 3. Может не самый быстрый способ. Два раза replace, но работает:)Об оптимизации уже потом)
 const arr = [0, 15, 10, 16, 28, 19, 50, 70, 85, 90];
 function arrNum (strNum) {
-return strNum.toString().replace(/0/g, 'zero').replace(/\[|]/g, '').split(',');
-}
-console.log(arrNum(arr));
