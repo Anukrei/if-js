@@ -69,9 +69,3 @@ function arrNum (strNum) {
 return strNum.toString().replace(/0/g, 'zero').replace(/\[|]/g, '').split(',');
 }
 console.log(arrNum(arr));
-
-
-
-
-
-
