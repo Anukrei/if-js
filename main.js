@@ -66,34 +66,3 @@ console.log(numMin(5, 8));
 // Задание 3. Может не самый быстрый способ. Два раза replace, но работает:)Об оптимизации уже потом)
 const arr = [0, 15, 10, 16, 28, 19, 50, 70, 85, 90];
 function arrNum (strNum) {
-	return strNum.toString().replace(/0/g, 'zero').replace(/\[|]/g, '').split(',');
-}
-console.log(arrNum(arr));
-
-// Functions - part 2
-// Напишите функцию sum, которая возвращает сумму чисел следующим образом:
-
-const sum = (a) => (b) => {
-  return a + b;
-};
-console.log(sum(2)(5));
-
-// Покрасьте абзацы по клику (событие click):
-const colorsArr = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];// Исходный массив цветов.
-const СolorElement = document.getElementsByTagName('p'); // Метод поиска по странице, желательно пр id, но у всех общий - p)
-for (let i = 0; i < СolorElement.length; i++) { // Цикл по найденному в документе.
-  СolorElement[i].addEventListener('click', func()); // К каждому итовому элементу по поиску добавляем событие (обработчик) addEventListener что бы не перезаписывалось событие - click.
-};
-
-function func () { // Функция, которую мы записали в метод addEventListener
-  let color = 0; // Начальный индекс нашего массива цветов, начальный отсчет.
-  return function () { // Замыкание
-    this.style.color = colorsArr[color]; // Добавляем непосредсвенно цвет к каждому итовому элементу, индексу массива. Можно и через переменную.
-    color++;// Счетник, для смены цветов, в один шаг.
-    if (color === colorsArr.length) { // Проверка, на длину массива. Если пробежались по всем цветам из массива. (true)
-      return (color = 0); // Возвращаем начальное значание, дабы наш цикл, в смене цветов, был бесконечен.
-    };
-  };
-};
-
-
