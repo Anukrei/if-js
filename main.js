@@ -145,15 +145,16 @@ const data = [
 	},
  ];
 
-function sersch(strArr, input){
+function searchString(strArr, input){
 	let sum = [];
+	input=prompt ("Введите интересующее значение", "Пример: Germany").toLowerCase();
 	for(let i=0;i<strArr.length;i++){
 		let current = `${strArr[i].country} ${strArr[i].city} ${strArr[i].hotel}`.toLowerCase();
 		if(current.includes(input)){
 			sum.push(strArr[i]);
-		}
-	}
-	return sum
-}
-console.log(sersch(data, input="germany".toLowerCase())) //наверное так делать нельзя, но в целях разносторонниму мышлению) 
+		};
+	};
+	return sum;
+};
+console.log(searchString(data)); //наверное так делать нельзя, но в целях разносторонниму мышлению)Один метод, второй уже срабатывает в функции)
 
