@@ -1,6 +1,6 @@
 
 //lesson-6
-const palindrome =strPalindome=>{return strPalindome.toUpperCase()===strPalindome.toUpperCase().split("").reverse().join("")}//Два раза toUpperCase, но в одну строку) 
+const palindrome=strPalindome=>{return strPalindome.toUpperCase()===strPalindome.toUpperCase().split("").reverse().join("")}//Два раза toUpperCase, но в одну строку) 
 console.log(palindrome("АННа"))
 
 //Сопоставте страны с городами из массива: 
