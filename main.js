@@ -161,9 +161,6 @@ const hotels = [
 	  country: 'Germany',
 	},
  ];
-
-
-
 //////////////////////////////////////////////
 //Поиск объектов размещения: 
 const hotels1 = [
@@ -323,7 +320,6 @@ const hotels1 = [
 	  country: 'Germany',
 	},
  ];
-
 //Поиск объектов размещения:
 function stringMatch(strArr, search){
 	search = prompt ("sdsdsd").toUpperCase().trim();
@@ -350,6 +346,8 @@ function filterCity (itemArr){
 }
 //Понимаю, что все максимально коряво, но эта хрень почему-то работает (можно больше методами заменить):)
 console.log(filterCity(hotels));
+///////////////////////////////
+
 
 // Работа с переменными
 let user = 'John Doe';
@@ -448,5 +446,3 @@ function func () { // Функция, которую мы записали в м
     };
   };
 };
-
-
