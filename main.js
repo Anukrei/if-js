@@ -46,7 +46,7 @@ function compareObj (Obj1,Obj2){
 
 console.log(compareObj (obj1,obj3));
 console.log(compareObj (obj1,obj2));
-=======
+
 //lesson-6
 const palindrome =strPalindome=>strPalindome.toUpperCase()===strPalindome.toUpperCase().split("").reverse().join("")//Два раза toUpperCase, но в одну строку) 
 console.log(palindrome("АННа"))
