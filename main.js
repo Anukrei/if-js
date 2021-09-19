@@ -48,7 +48,7 @@ console.log(compareObj (obj1,obj3));
 console.log(compareObj (obj1,obj2));
 =======
 //lesson-6
-const palindrome =strPalindome=>{return strPalindome.toUpperCase()===strPalindome.toUpperCase().split("").reverse().join("")}//Два раза toUpperCase, но в одну строку) 
+const palindrome =strPalindome=>strPalindome.toUpperCase()===strPalindome.toUpperCase().split("").reverse().join("")//Два раза toUpperCase, но в одну строку) 
 console.log(palindrome("АННа"))
 
 //Сопоставте страны с городами из массива: 
@@ -373,8 +373,8 @@ const hotels1 = [
  ];
 
 //Поиск объектов размещения:
-function stringMatch(strArr, search){
-	search = prompt ("sdsdsd").toUpperCase().trim();
+function stringMatch(strArr){
+	const search = prompt ("sdsdsd").toUpperCase().trim();
 	 return strArr.filter(item=> Object.values(item).some(it =>it.toUpperCase().trim().includes(search)));
 	 
 }
