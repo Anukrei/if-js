@@ -145,9 +145,9 @@ const data = [
 	},
  ];
 
-function searchString(strArr, input){
+function searchString(strArr){
 	let sum = [];
-	input=prompt ("Введите интересующее значение", "Пример: Germany").toLowerCase();
+	const input=prompt ("Введите интересующее значение").toLowerCase();
 	for(let i=0;i<strArr.length;i++){
 		let current = `${strArr[i].country} ${strArr[i].city} ${strArr[i].hotel}`.toLowerCase();
 		if(current.includes(input)){
@@ -156,5 +156,5 @@ function searchString(strArr, input){
 	};
 	return sum;
 };
-console.log(searchString(data)); //наверное так делать нельзя, но в целях разносторонниму мышлению)Один метод, второй уже срабатывает в функции)
+console.log(searchString(data)); 
 
