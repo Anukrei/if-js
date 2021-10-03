@@ -30,11 +30,11 @@ const studentsData = [
 	constructor(arrStudent) {
 	  this.firstName = arrStudent.firstName;
 	  this.lastName = arrStudent.lastName;
-	}
+	};
 	get fullName() {
 	  return `${this.firstName} ${this.lastName}`;
-	}
- }
+	};
+ };
  
  class Student extends User {
 	constructor(arrStudent) {
@@ -56,7 +56,7 @@ const studentsData = [
 			  lastName: item.lastName,
 			  admissionYear: item.admissionYear,
 			  courseName: item.courseName,
-			})
+			});
 	  );
 	};
  };
