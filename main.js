@@ -1,3 +1,76 @@
+// Lesson-8
+const studentsData = [
+	{
+	  firstName: "Василий",
+	  lastName: "Петров",
+	  admissionYear: 2019,
+	  courseName: "Java",
+	},
+	{
+	  firstName: "Иван",
+	  lastName: "Иванов",
+	  admissionYear: 2018,
+	  courseName: "JavaScript",
+	},
+	{
+	  firstName: "Александр",
+	  lastName: "Федоров",
+	  admissionYear: 2017,
+	  courseName: "Python",
+	},
+	{
+	  firstName: "Николай",
+	  lastName: "Петров",
+	  admissionYear: 2019,
+	  courseName: "Android",
+	},
+ ];
+ 
+ class User {
+	constructor(arrStudent) {
+	  this.firstName = arrStudent.firstName;
+	  this.lastName = arrStudent.lastName;
+	}
+	get fullName() {
+	  return `${this.firstName} ${this.lastName}`;
+	}
+ }
+ 
+ class Student extends User {
+	constructor(arrStudent) {
+	  super(arrStudent);
+	  this.admissionYear = arrStudent.admissionYear;
+	  this.courseName = arrStudent.courseName;
+	};
+	get course() {
+	  return 2020 - this.admissionYear;
+	};
+ };
+ 
+ class Students {
+	constructor(arrStudent) {
+	  this.students = arrStudent.map(
+		 (item) =>
+			new Student({
+			  firstName: item.firstName,
+			  lastName: item.lastName,
+			  admissionYear: item.admissionYear,
+			  courseName: item.courseName,
+			})
+	  );
+	};
+ };
+ 
+ Students.prototype.getInfo = function () {
+	this.students.sort((a, b) => a.course - b.course);
+	this.students.map((item) =>
+	  console.log(`${item.fullName} -  ${item.courseName}, ${item.course} курс `)
+	);
+ };
+ 
+ const res = new Students(studentsData);
+ console.log(res.getInfo());
+ 
 // Lesson-7
 const obj1 = {
   a: 'a',
@@ -210,7 +283,6 @@ const hotels = [
   }
 ];
 
-/// ///////////////////////////////////////////
 // Поиск объектов размещения:
 const hotels1 = [
   {
