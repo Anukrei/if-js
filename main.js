@@ -1,36 +1,36 @@
 //lesson 9
 const colors = {
-  steps: 0, //прошу сильно не ругаться, но пришлось добавить, для лучшего понимания счетчик в объект.
-  data: ["magenta", "cyan", "firebrick", "springgreen", "skyblue"],
-  [Symbol.iterator]() {},
-
-  next() {
-    this.steps === this.data.length
-      ? (this.steps = 0)
-      : (this.val = this.data[this.steps++]);
-    return {
-      val: this.val,
-    };
-  },
-};
-
-function staining(id) {
-  return function prompt(event) {
-    event.target.style.color = id.next().val;
-  };
-};
-
-const ArrElemets = [text1, text2, text3];
-
-function iterator(arr) {
-  text1 = document.getElementById("text1");
-  text2 = document.getElementById("text2");
-  text3 = document.getElementById("text3");
-  for (let i = 0; i < arr.length; i++) {
-    ArrElemets[i].addEventListener("click", staining(colors));
-  }
-}
-iterator(ArrElemets);
+	steps: 0, //прошу сильно не ругаться, но пришлось добавить, для лучшего понимания счетчик в объект.
+	data: ["magenta", "cyan", "firebrick", "springgreen", "skyblue"],
+	[Symbol.iterator]() {},
+ 
+	next() {
+	  this.steps === this.data.length
+		 ? (this.steps = 0)
+		 : (this.val = this.data[this.steps++]);
+	  return {
+		 val: this.val,
+	  };
+	},
+ };
+ 
+ function staining(id) {
+	return function prompt(event) {
+	  event.target.style.color = id.next().val;
+	};
+ };
+ 
+ const ArrElemets = [text1, text2, text3];
+ 
+ function iterator(arr) {
+	text1 = document.getElementById("text1");
+	text2 = document.getElementById("text2");
+	text3 = document.getElementById("text3");
+	for (let i = 0; i < arr.length; i++) {
+	  ArrElemets[i].addEventListener("click", staining(colors));
+	}
+ }
+ iterator(ArrElemets);
 
 // Lesson-8
 const studentsData = [
