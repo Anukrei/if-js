@@ -1,10 +1,7 @@
 
 //lesson-6
-<<<<<<< HEAD
+
 const palindrome =strPalindome=> strPalindome.toUpperCase()===strPalindome.toUpperCase().split("").reverse().join("")//Два раза toUpperCase, но в одну строку) 
-=======
-const palindrome=strPalindome=>{return strPalindome.toUpperCase()===strPalindome.toUpperCase().split("").reverse().join("")}//Два раза toUpperCase, но в одну строку) 
->>>>>>> f1c73aa82976b7598ce7dc6baf6aafeb4156cf81
 console.log(palindrome("АННа"))
 
 //Сопоставте страны с городами из массива: 
@@ -328,7 +325,6 @@ const hotels1 = [
 function stringMatch(strArr){
 	const search = prompt ("sdsdsd").toUpperCase().trim();
 	 return strArr.filter(item=> Object.values(item).some(it =>it.toUpperCase().trim().includes(search)));
-	 
 }
 console.log(stringMatch (hotels1));
 
