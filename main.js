@@ -1,15 +1,13 @@
-//lesson 9
+// Lesson-9//Надеюсь эта хрень будет рабоать:)
 const colors = {
 	steps: 0, //прошу сильно не ругаться, но пришлось добавить, для лучшего понимания счетчик в объект.
 	data: ["magenta", "cyan", "firebrick", "springgreen", "skyblue"],
 	[Symbol.iterator]() {},
  
 	next() {
-	  this.steps === this.data.length
-		 ? (this.steps = 0)
-		 : (this.val = this.data[this.steps++]);
+	  this.steps === this.data.length ? (this.steps = 0) : (this.val = this.data);
 	  return {
-		 val: this.val,
+		 val: this.val[this.steps++],
 	  };
 	},
  };
@@ -18,19 +16,14 @@ const colors = {
 	return function prompt(event) {
 	  event.target.style.color = id.next().val;
 	};
- };
- 
- const ArrElemets = [text1, text2, text3];
- 
- function iterator(arr) {
-	text1 = document.getElementById("text1");
-	text2 = document.getElementById("text2");
-	text3 = document.getElementById("text3");
-	for (let i = 0; i < arr.length; i++) {
-	  ArrElemets[i].addEventListener("click", staining(colors));
-	}
  }
- iterator(ArrElemets);
+ 
+ const text = Object.assign({}, colors);
+ const text1 = Object.assign({}, colors);
+ 
+ document.getElementById("text1").addEventListener("click", staining(text));
+ document.getElementById("text2").addEventListener("click", staining(text1));
+ document.getElementById("text3").addEventListener("click", staining(colors));
 
 // Lesson-8
 const studentsData = [
