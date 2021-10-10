@@ -54,9 +54,18 @@ const obj1 = {
  console.log(compareObj(obj1, obj3));
  console.log(compareObj(obj1, obj2));
 
+<<<<<<< HEAD
 // lesson-6
 const palindrome = strPalindome => { return strPalindome.toUpperCase() === strPalindome.toUpperCase().split('').reverse().join(''); };// Два раза toUpperCase, но в одну строку)
 console.log(palindrome('АННа'));
+=======
+console.log(compareObj (obj1,obj3));
+console.log(compareObj (obj1,obj2));
+
+//lesson-6
+const palindrome =strPalindome=>strPalindome.toUpperCase()===strPalindome.toUpperCase().split("").reverse().join("")//Два раза toUpperCase, но в одну строку) 
+console.log(palindrome("АННа"))
+>>>>>>> 5f18ce6ef2d33dfbb489736219c5389632a2c0bd
 
 // Сопоставте страны с городами из массива:
 const hotels = [
@@ -377,10 +386,18 @@ const hotels1 = [
   }
 ];
 
+<<<<<<< HEAD
 // Поиск объектов размещения:
 function stringMatch (strArr, search) {
   search = prompt('sdsdsd').toUpperCase().trim();
 	 return strArr.filter(item => Object.values(item).some(it => it.toUpperCase().trim().includes(search)));
+=======
+//Поиск объектов размещения:
+function stringMatch(strArr){
+	const search = prompt ("sdsdsd").toUpperCase().trim();
+	 return strArr.filter(item=> Object.values(item).some(it =>it.toUpperCase().trim().includes(search)));
+	 
+>>>>>>> 5f18ce6ef2d33dfbb489736219c5389632a2c0bd
 }
 console.log(stringMatch(hotels1));
 
