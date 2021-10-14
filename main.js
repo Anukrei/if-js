@@ -1,26 +1,67 @@
-// Lesson-9//Надеюсь эта хрень будет рабоать:)
-const colors = {
-	steps: 0, //прошу сильно не ругаться, но пришлось добавить, для лучшего понимания счетчик в объект.
-	data: ["magenta", "cyan", "firebrick", "springgreen", "skyblue"],
-	[Symbol.iterator]() {},
- 
-	next() {
-	  this.steps === this.data.length ? (this.steps = 0) : (this.val = this.data);
-	  return {
-		 val: this.val[this.steps++],
-	  };
-	},
- };
- 
- function staining(id) {
-	return function prompt(event) {
-	  event.target.style.color = id.next().val;
-	};
- }
- 
- const text = Object.assign({}, colors);
- const text1 = Object.assign({}, colors);
- 
- document.getElementById("text1").addEventListener("click", staining(text));
- document.getElementById("text2").addEventListener("click", staining(text1));
- document.getElementById("text3").addEventListener("click", staining(colors));
+//lesson-5
+//Преобразование формата даты:
+const date = "2020-11-26";
+const DateStr = (str) => {
+  return str.split("-").reverse().join(".");
+};
+console.log(DateStr(date));
+//Поиск объектов размещения:
+const data = [
+  {
+    country: "Russia",
+    city: "Saint Petersburg",
+    hotel: "Hotel Leopold",
+  },
+  {
+    country: "Spain",
+    city: "Santa Cruz de Tenerife",
+    hotel: "Apartment Sunshine",
+  },
+  {
+    country: "Slowakia",
+    city: "Vysokie Tatry",
+    hotel: "Villa Kunerad",
+  },
+  {
+    country: "Germany",
+    city: "Berlin",
+    hotel: "Hostel Friendship",
+  },
+  {
+    country: "Indonesia",
+    city: "Bali",
+    hotel: "Ubud Bali Resort&SPA",
+  },
+  {
+    country: "Netherlands",
+    city: "Rotterdam",
+    hotel: "King Kong Hostel",
+  },
+  {
+    country: "Marocco",
+    city: "Ourika",
+    hotel: "Rokoko Hotel",
+  },
+  {
+    country: "Germany",
+    city: "Berlin",
+    hotel: "Hotel Rehberge Berlin Mitte",
+  },
+];
+
+function search(strArr, input) {
+  const sum = [];
+  input = prompt("Input");
+  for (let i = 0; i < strArr.length; i++) {
+    const current =
+      `${strArr[i].country} ${strArr[i].city} ${strArr[i].hotel}`.toLowerCase();
+    if (current.includes(input)) {
+      sum.push(strArr[i]);
+    }
+  };
+  return sum;
+};
+console.log(search(data)); //наверное так делать нельзя, но в целях разносторонниму мышлению)git
+
+
+
