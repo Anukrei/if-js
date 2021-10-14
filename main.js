@@ -64,3 +64,4 @@ function search(strArr, input) {
 console.log(search(data)); //наверное так делать нельзя, но в целях разносторонниму мышлению)git
 
 
+
