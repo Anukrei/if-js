@@ -7,7 +7,7 @@ function dateArr() {
 }
 dateArr();
 
-let homes = document.createElement("div");
+const homes = document.createElement("div");
 const homesl = document.createElement("section");
 homesl.innerHTML = `<p>Homes guests loves</p>`;
 homesl.style.cssText = `
