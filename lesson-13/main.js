@@ -50,11 +50,11 @@ function htmlItem(arr) {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-   homes = await eventSearch();
+   homes = await eventSearch(homes);
 });
 
 async function eventSearch() {
-  const searchResults = sessionStorage.getItem(homes);
+  const searchResults = sessionStorage.getItem("homes");
   if (searchResults) {
 	const found = JSON.parse();
 	htmlItem(found);
