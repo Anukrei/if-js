@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "lint-write": "eslint --debug",
-    "lint": "eslint main.js",
-    "test": "jest"
+	"lint-write": "eslint --debug",
+	"lint": "eslint main.js",
+	"lint:fix": "eslint main.js --fix"
   },
   "repository": {
     "type": "git",
