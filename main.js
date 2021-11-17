@@ -1,6 +1,8 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-tabs */
+
+// all = "==!!"
 const hotelsContent = document.querySelector('#avail-hotels-content');
 
 const forma = document.querySelector('.search-form');
@@ -91,32 +93,32 @@ const childrenButton = document.getElementById('childrenButton');
 const roomButton = document.getElementById('roomButton');
 
 plusAdults.addEventListener('click', () => {
-  counterAdult.innerHTML++ === 30
+  counterAdult.innerHTML++ == 30
     ? (counterAdult.innerHTML = 30)
     : counterAdult.innerHTML;
 });
 
 plusAdults.addEventListener('click', () => {
-  placeholderCounter.innerHTML++ === 30
+  placeholderCounter.innerHTML++ == 30
     ? (placeholderCounter.innerHTML = 30)
     : placeholderCounter.innerHTML;
 });
 
 minusAdults.addEventListener('click', () => {
-  placeholderCounter.innerHTML-- === 0
+  placeholderCounter.innerHTML-- == 0
     ? (placeholderCounter.innerHTML = 0)
     : placeholderCounter.innerHTML;
 });
 
 minusAdults.addEventListener('click', () => {
-  counterAdult.innerHTML-- === 0
+  counterAdult.innerHTML-- == 0
     ? (counterAdult.innerHTML = 0)
     : counterAdult.innerHTML;
 });
 
 // 2
 plusChildren.addEventListener('click', () => {
-  counterChildren.innerHTML++ === 10
+  counterChildren.innerHTML++ == 10
     ? (counterChildren.innerHTML = 10)
     : counterChildren.innerHTML;
 
@@ -128,7 +130,7 @@ plusChildren.addEventListener('click', () => {
     ? (clone = copySelect.cloneNode(false))
     : (clone = copySelect.cloneNode(true));
 
-  if (counterChildren.innerHTML === 10) {
+  if (counterChildren.innerHTML == 10) {
     clone = copySelect;
   }
 
@@ -136,13 +138,13 @@ plusChildren.addEventListener('click', () => {
 });
 
 plusChildren.addEventListener('click', () => {
-  placeholderChildren.innerHTML++ === 10
+  placeholderChildren.innerHTML++ == 10
     ? (placeholderChildren.innerHTML = 10)
     : placeholderChildren.innerHTML;
 });
 
 minusChildren.addEventListener('click', () => {
-  placeholderChildren.innerHTML-- === 0
+  placeholderChildren.innerHTML-- == 0
     ? (placeholderChildren.innerHTML = 0)
     : placeholderChildren.innerHTML;
 });
@@ -150,7 +152,7 @@ minusChildren.addEventListener('click', () => {
 
 
 minusChildren.addEventListener('click', () => {
-  counterChildren.innerHTML-- === 0
+  counterChildren.innerHTML-- == 0
     ? (counterChildren.innerHTML = 0)
     : counterChildren.innerHTML;
   if (counterChildren.innerHTML == 0) {
