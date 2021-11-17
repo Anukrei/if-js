@@ -32,14 +32,18 @@ const obj3 = {
 };
 
 function compareObj(Obj1, Obj2) {
-  const checkObj = typeof Obj1 === "object" && typeof Obj2 === "object"; // Проверка:является ли объектом.
+  const checkObj = typeof Obj1 === "object" && typeof Obj2 === "object"; 
   if (checkObj) {
     for (const prop in Obj1) {
+
+      if (!Obj2.hasOwnProperty(prop)) return false; 
+=======
       if (!Obj2.hasOwnProperty(prop)) {
         return false; // Проверка по ключам.
       }
+
       if (typeof Obj1[prop] === "object" && typeof Obj2[prop] === "object") {
-        // Проерка на вложенность объектов
+        
         const rez = compareObj(Obj1[prop], Obj2[prop]); // Запускаем функцияю для вложенных объектов, но уже с методами: "ключ:значение"
         if (!rez) {
           return false; // Проверка на равенство
@@ -48,12 +52,26 @@ function compareObj(Obj1, Obj2) {
         return false; // Проверка на примитив. За пределами вложенности.
       }
     }
-    return true; // Если все проверки пройдены: объект равен объекту
+    return true; 
   }
 }
 
 console.log(compareObj(obj1, obj3));
 console.log(compareObj(obj1, obj2));
+
+
+// lesson-6
+const palindrome = (strPalindome) => {
+  return (
+    strPalindome.toUpperCase() ===
+    strPalindome.toUpperCase().split("").reverse().join("")
+  );
+};
+console.log(palindrome("АННа"));
+
+/
+const hotels = [
+=======
 =======
 //lesson-5
 //Преобразование формата даты:
@@ -64,6 +82,7 @@ const DateStr = (str) => {
 console.log(DateStr(date));
 //Поиск объектов размещения:
 const data = [
+
   {
     country: "Russia",
     city: "Saint Petersburg",
